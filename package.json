@@ -1,7 +1,7 @@
 {
   "name" : "foojs",
   "description" : "General utilities for working with primitives.",
-  "version" : "0.0.1",
+  "version" : "0.0.2",
   "author" : {
     "name" : "Mathias Kretschek",
     "email" : "mathias@kretschek.com.br"
@@ -18,14 +18,14 @@
     "url" : "https://github.com/mkretschek/node-foojs.git"
   },
   "scripts" : {
-    "test" : "mocha -R spec"
+    "test" : "NODE_ENV=test ./node_modules/.bin/mocha --colors --recursive -R spec -u bdd ./test"
   },
   "dependencies" : {
-    "underscore" : "1.4"
+    "underscore" : "~1.5.1"
   },
   "devDependencies" : {
-    "mocha" : "1.9",
-    "expect.js" : "0.2"
+    "mocha" : "~1.12.0",
+    "expect.js" : "~0.2.0"
   },
   "engine" : {
     "node" : "0.10"
