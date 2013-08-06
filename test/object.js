@@ -53,6 +53,51 @@ describe('foo.object', function () {
       expect(object.dig(obj, 'foo.baz')).to.be(undefined);
       expect(object.dig(obj, ['foo', 'baz'])).to.be(undefined);
     });
-
   }); // .dig()
+
+
+  describe('#isPlainObject()', function () {
+    var isPlain = object.isPlainObject;
+
+    it('is accessible', function () {
+      expect(isPlain).not.to.be(undefined);
+    });
+
+
+    it('is a function', function () {
+      expect(isPlain).to.be.a('function');
+    });
+
+
+    it('returns true for plain objects', function () {
+      expect(isPlain({})).to.be(true);
+      expect(isPlain(new Object())).to.be(true);
+    });
+
+
+    it('returns false for other objects', function () {
+      function Dummy() {}
+
+      var values = [
+          [],
+          new Array(),
+          'foo',
+          123,
+          1.2,
+          function () {},
+          /foo/,
+          new RegExp('foo'),
+          true,
+          false,
+          new Dummy()
+        ],
+        len,
+        i;
+
+
+      for (i = 0, len = values.length; i < len; i += 1) {
+        expect(isPlain(values[i])).to.be(false);
+      };
+    });
+  });
 }); // foo.object

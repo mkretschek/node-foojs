@@ -1,7 +1,7 @@
 {
   "name" : "foojs",
   "description" : "General utilities for working with primitives.",
-  "version" : "0.0.2",
+  "version" : "0.0.3",
   "author" : {
     "name" : "Mathias Kretschek",
     "email" : "mathias@kretschek.com.br"
