@@ -1,7 +1,7 @@
 {
   "name" : "foojs",
   "description" : "General utilities for working with primitives.",
-  "version" : "0.0.3",
+  "version" : "0.0.4",
   "author" : {
     "name" : "Mathias Kretschek",
     "email" : "mathias@kretschek.com.br"
@@ -22,7 +22,7 @@
   },
   "dependencies" : {},
   "devDependencies" : {
-    "mocha" : "~1.12.0",
+    "mocha" : "~1.13.0",
     "expect.js" : "~0.2.0"
   },
   "engine" : {
